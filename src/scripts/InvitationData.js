@@ -34,6 +34,7 @@ export const deleteAtendee = atendeeId => {
     
 }
 
+    //updateNote fetch call
 export const updateNote = atendee => {
 
     return fetch(`http://localhost:8088/atendee/${atendee.id}`, {

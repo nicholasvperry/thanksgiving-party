@@ -2,7 +2,7 @@ import { AtendeeList } from "./InvitationList.js";
 import { deleteAtendee } from "./InvitationData.js";
 import { atendeeEditForm } from "./InivitationEditForm.js";
 
-
+//card that is printed with attendees. Checkmark example
 export const Atendee = (singleAtendeeObject) => {
     return `
     <section class="entry card">
@@ -23,7 +23,9 @@ export const Atendee = (singleAtendeeObject) => {
     `
 }
 
-
+//Event listener listens for delete button to be clicked.
+//Button has object id which is passed to this function.
+//After delete happens call AttendeeList
 const deleteHub = document.querySelector("body") 
 deleteHub.addEventListener("click", (deleteObject) => {
    
@@ -35,6 +37,8 @@ deleteHub.addEventListener("click", (deleteObject) => {
   }
 });
 
+//Event listener listens for edit button to be clicked.
+//Button has object id which is passed to this function.
 const editHub = document.querySelector("body")
 editHub.addEventListener("click", (editObject) => {
     if (editObject.target.id.startsWith("edit")) {
